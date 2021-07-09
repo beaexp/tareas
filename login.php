@@ -19,7 +19,7 @@ if (count($_POST) > 0) {
             $message = "Nombre de usuario o password aqui pasa algo" . $fila . "<br>" . "SELECT * FROM tareas.users WHERE username = '$username'  AND pass = '$pass';";
         }
     } else {
-        $message = "Nombre de usuario o password incorrectos" . $reslut;
+        $message = "Nombre de usuario o password incorrectos" . $result;
     }
     pg_free_result($result);
     pg_close();
