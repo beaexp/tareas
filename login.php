@@ -7,7 +7,7 @@ if (count($_POST) > 0) {
 
     $username = $_POST["username"];
     $pass = $_POST["password"];
-    $result = pg_query("SELECT * FROM tareas.users WHERE username = '$username'  AND pass = '$pass';");
+    $result = pg_query("SELECT * FROM tareas.users WHERE username = '$username'  AND pass = '$pass';");  //Lo ideal es recuperar solo la id, no todas las columnas
 
     if ($result) {
         $fila = pg_fetch_array($result, null, PGSQL_ASSOC);
