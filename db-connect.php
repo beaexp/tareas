@@ -13,5 +13,5 @@ function open_connection() {
     foreach ($db_config as $key => $value) {
         $db_connection_string .= $key . "=" . $value . " ";
     }
-    pg_connect($db_connection_string) or die ("No se ha podido conectar con la base de datos: ". pg_last_error());
+    return pg_connect($db_connection_string) or die ("No se ha podido conectar con la base de datos: ". pg_last_error());
 }
